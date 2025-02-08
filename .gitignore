@@ -1,0 +1,15 @@
+# Ignore sensitive files
+.env
+config.json
+secrets.txt
+
+# Ignore logs and temporary files
+*.log
+node_modules/
+__pycache__/
+*.tmp
+
+# Ignore compiled files
+*.exe
+*.o
+*.class

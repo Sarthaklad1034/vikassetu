@@ -1,0 +1,57 @@
+{
+    "name": "vikassetu",
+    "version": "1.0.0",
+    "description": "Smart governance and development tracking platform for rural India",
+    "main": "index.js",
+    "private": true,
+    "workspaces": [
+        "client",
+        "server"
+    ],
+    "scripts": {
+        "start": "concurrently \"npm run server\" \"npm run client\"",
+        "server": "npm run start --workspace=server",
+        "client": "npm run dev --workspace=client",
+        "build": "npm run build --workspace=client",
+        "test": "npm run test --workspace=server && npm run test --workspace=client",
+        "lint": "npm run lint --workspaces",
+        "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+        "prepare": "husky install"
+    },
+    "dependencies": {
+        "concurrently": "^8.2.2",
+        "cross-env": "^7.0.3",
+        "dotenv": "^16.4.1"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^18.6.0",
+        "@commitlint/config-conventional": "^18.6.0",
+        "husky": "^8.0.3",
+        "lint-staged": "^15.2.1",
+        "prettier": "^3.2.4"
+    },
+    "engines": {
+        "node": ">=18.0.0",
+        "npm": ">=8.0.0"
+    },
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx}": [
+            "eslint --fix",
+            "prettier --write"
+        ],
+        "*.{json,md}": [
+            "prettier --write"
+        ]
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
+    },
+    "author": "Sarthak Lad",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Sarthaklad1034/vikassetu.git"
+    }
+}

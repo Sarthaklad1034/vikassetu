@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="VikasSetu - Bridging Rural Development & Progress Tracker" />
+    <title>VikasSetu - Rural Development Platform</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="public/icon.png" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Map Integration -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=%VITE_GOOGLE_MAPS_API_KEY%&libraries=places"></script>
+</head>
+
+<body class="bg-gray-100">
+    <div id="root"></div>
+    <noscript>You need to enable JavaScript to run this application.</noscript>
+
+    <!-- Loading State -->
+    <div id="loader" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-90">
+        <div class="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="/src/index.jsx"></script>
+</body>
+
+</html>
